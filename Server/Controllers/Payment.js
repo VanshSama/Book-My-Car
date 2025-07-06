@@ -3,7 +3,7 @@ const Product = require("../Models/Product");
 const crypto = require("crypto");
 const User = require("../Models/User");
 const mailSender = require("../Utils/MailSender");
-const { instance } = require("../config/razorpay");
+const { instance } = require("../Config/razorpay");
 require("dotenv").config();
 // const {instance} = require("../Config/Razorpay")
 
