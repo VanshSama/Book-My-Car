@@ -5,6 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { MdOutlineArrowDropDown, MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { useDispatch, useSelector } from 'react-redux';
 import ProfileDropdown from '../Core/Auth/ProfileDropdown';
+import {Car} from 'lucide-react'
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -14,11 +15,13 @@ const Navbar = () => {
     const productTypes = ["Car", "Bike", "Spare part", "Other"];
 
     return (
-        <div className='w-full h-full flex items-center justify-center px-2 py-2 border-b-[1px] border-richblack-600'>
+        <div className='w-full h-full flex items-center justify-center px-2 py-2 border-b-[1px] border-richblack-600 z-30'>
             <div className='w-11/12 h-full flex flex-row items-center justify-between'>
-                <Link to={"/"}>
-                    <img src={logo} alt='Logo' className='w-[50px] h-[30px] bg-yellow-50'
-                    />
+                <Link className="flex items-center" to={"/"}>
+                    <Car className="w-8 h-8 text-blue-200 mr-2" />
+                    <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-blue-200">
+                        BookMyCar
+                    </div>
                 </Link>
                 
                 <div className='flex flex-row gap-4 items-center'>
@@ -45,10 +48,6 @@ const Navbar = () => {
 
                     <Link to={"/compare"} className={`text-lg font-inter font-semibold text-richblack-25`}>
                         Compare
-                    </Link>
-
-                    <Link to={"/dealers"} className={`text-lg font-inter font-semibold text-richblack-25`}>
-                        Dealers
                     </Link>
 
                     <Link to={"/about"} className={`text-lg font-inter font-semibold text-richblack-25`}>

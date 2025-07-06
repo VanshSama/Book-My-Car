@@ -21,6 +21,8 @@ import MyProducts from "./Components/Core/Dashboard/MyProducts/index.js";
 import AddProduct from "./Components/Core/Dashboard/AddProduct/index.js";
 import Products from "./Pages/Products.js";
 import Product from "./Pages/Product.js";
+import Compare from "./Components/Common/Compare.js";
+import AboutSection from "./Pages/About.js";
 
 function App() {
   const {user} = useSelector((state) => state.profile);
@@ -39,12 +41,14 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/products/:productType" element={<Products />} />
         <Route path="/product/:productId" element={<Product />} />
-
+        <Route path="/compare" element={<Compare />} />
+        <Route path="/about" element={<AboutSection />} />
+        
         <Route element={<PrivateRoute><Dashboard /></PrivateRoute>} >
           <Route path="/dashboard/my-profile" element={<MyProfile />}/>
           <Route path="/dashboard/settings" element={<Settings />} />
 
-          {
+          {/* {
             user && user.accountType === "Customer" && (
             <>
               <Route path="/dashboard/product-history" element={<ProductHistory />} />
@@ -60,7 +64,13 @@ function App() {
                 <Route path="/dashboard/add-product" element={<AddProduct />} />
               </>
             )
-          }
+          } */}
+
+            <Route path="/dashboard/provider" element={<Provider />} />
+            <Route path="/dashboard/my-products" element={<MyProducts />} />
+            <Route path="/dashboard/add-product" element={<AddProduct />} />
+            <Route path="/dashboard/product-history" element={<ProductHistory />} />
+            <Route path="/dashboard/cart" element={<Cart />} />
         </Route>
       </Routes>
     </div>

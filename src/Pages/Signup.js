@@ -54,7 +54,7 @@ const Signup = () => {
                         </div>
                     </div>
 
-                    <div className='cursor-pointer p-[4px] rounded-full flex flex-row gap-[10px] bg-richblack-700 text-richblack-200 items-center w-max'>
+                    {/* <div className='cursor-pointer p-[4px] rounded-full flex flex-row gap-[10px] bg-richblack-700 text-richblack-200 items-center w-max'>
                         <div className={`font-medium font-inter rounded-full px-[18px] text-base ${accountType === "Customer" ? "bg-richblack-900 py-[6px] gap-[10px]" : ""}`}  onClick={() => {
                             setAccountType("Customer");
                             formData.accountType = "Customer"
@@ -69,7 +69,7 @@ const Signup = () => {
                         }}>
                             Provider
                         </div>
-                    </div>
+                    </div> */}
 
                     <form onSubmit={submitHandler} className='flex flex-col justify-between gap-10 w-full h-full'>
                         <div className='flex flex-col gap-2 w-full h-full'>

@@ -19,8 +19,7 @@ const Sidebar = () => {
             <div className={`flex w-full flex-col items-start gap-4 text-base font-semibold border-b-[1px] pb-4`}>
                 {
                     links.map((link) => {
-                        return (link.type === "" || link.type === user.accountType) && 
-                            <SidebarLink key={link.id} name={link.name} path={link.path} logo={link.logo}/>
+                        return <SidebarLink key={link.id} name={link.name} path={link.path} logo={link.logo}/>
                     })
                 }
             </div>
