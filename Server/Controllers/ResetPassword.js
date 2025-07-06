@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const crypto = require("crypto");
 const mailSender = require("../Utils/MailSender");
 require("dotenv").config();
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 // Reset password token generation 
 exports.resetPasswordToken = async (req, res) => {
